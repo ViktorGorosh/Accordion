@@ -14,16 +14,6 @@ body {
 .accordion-item {
 	margin-bottom: 10px;
 }
-.accordion-item__input {
-	display: none;
-	&:checked ~ .accordion-item__content {
-		display: block;
-		animation-play-state: running;
-	}
-	&:checked ~ .accordion-item__trigger {
-		background-color: lightblue;
-	}
-}
 .accordion-item__trigger {
 	padding: 5px;
 	display: block;
@@ -34,17 +24,4 @@ body {
 	display: none;
 	border: 1px solid green;
 	border-top: 0;
-	transition: 0.5s;
-	animation: fadeIn 1s linear;
-	animation-play-state: paused;
-}
-
-/*Анимация*/
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to	{
-		opacity: 1;
-	}
 }
