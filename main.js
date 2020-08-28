@@ -1,5 +1,11 @@
 $(document).ready(function () {
 	$('.accordion-item__trigger').click(function () {
-		$(this).next('.accordion-item__content').slideToggle(200);
+		const parent =  $(this).parent();
+		if (parent.hasClass('accordion-item--active')) {
+			parent.removeClass('accordion-item--active');
+		} else {
+			$('.accordion-item--active').removeClass('accordion-item--active');
+			parent.addClass('accordion-item--active');
+		}
 	});
 });
