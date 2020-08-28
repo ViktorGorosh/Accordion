@@ -1,11 +1,5 @@
-$(document).ready(function () {
-	$('.accordion-item__trigger').click(function () {
-		const parent =  $(this).parent();
-		if (parent.hasClass('accordion-item--active')) {
-			parent.removeClass('accordion-item--active');
-		} else {
-			$('.accordion-item--active').removeClass('accordion-item--active');
-			parent.addClass('accordion-item--active');
-		}
+document.querySelectorAll('.accordion-item__trigger').forEach((item) => {
+	item.addEventListener('click', function () {
+		item.parentElement.classList.toggle('accordion-item--active');
 	});
 });
